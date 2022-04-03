@@ -8,6 +8,10 @@ import card3 from "../img/card3.jpg";
 import card4 from "../img/card4.jpg";
 import card5 from "../img/card5.jpg";
 import card6 from "../img/card6.jpg";
+import card7 from "../img/card7.jpg";
+import card8 from "../img/card8.jpeg";
+import MainRightTop from "./MainRightTop";
+import MainRightBottom from "./MainRightBottom";
 
 function MainContainer() {
   return (
@@ -61,11 +65,21 @@ function MainContainer() {
           </div>
 
           <main>
-              <CardMain imgSrc={card1} title={"Cubic Thunder"} hearts={"65"} />
+            <CardMain imgSrc={card1} title={"Cubic Thunder"} hearts={"65"} />
+            <CardMain imgSrc={card2} title={"Pokemon Ball"} hearts={"45"} />
+            <CardMain imgSrc={card3} title={"Pyramid God"} hearts={"85"} />
+            <CardMain imgSrc={card4} title={"Stunning Cube"} hearts={"75"} />
+            <CardMain imgSrc={card5} title={"Star Crystal"} hearts={"35"} />
+            <CardMain imgSrc={card7} title={"The Circle"} hearts={"25"} />
+            <CardMain imgSrc={card6} title={"Crystal Bird"} hearts={"85"} />
+            <CardMain imgSrc={card8} title={"Neon Cubes"} hearts={"55"} />
           </main>
         </div>
       </div>
-      <div className="right"></div>
+      <div className="right">
+        <MainRightTop />
+        <MainRightBottom />
+      </div>
     </div>
   );
 }
