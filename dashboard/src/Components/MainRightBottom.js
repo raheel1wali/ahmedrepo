@@ -1,4 +1,5 @@
 import React from "react";
+import TopSeller from "../topSeller";
 
 function MainRightBottom() {
   return (
@@ -8,13 +9,22 @@ function MainRightBottom() {
         <a href="#">View More</a>
       </div>
 
-      <div className="topSeller">
-          <div className="topSellerImg"></div>
+      {TopSeller &&
+        TopSeller.map((seller) => (
+          <div className="topSeller" key={seller?.id}>
+            <div className="topSellerImg">
+              <img src={seller?.imgSrc} alt="" />
+            </div>
 
-          <p className="topSellerName"> Sample Name <span>@sample</span></p>
-          
-          <a href="#" className="btn1 btn">Follow</a>
-      </div>
+            <p className="topSellerName">
+              {seller?.seller_name} <span>{seller?.username}</span>
+            </p>
+
+            <a href="#" className="btn1 btn">
+              Follow
+            </a>
+          </div>
+        ))}
     </div>
   );
 }

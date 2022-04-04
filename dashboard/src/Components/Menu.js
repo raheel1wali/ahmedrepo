@@ -17,13 +17,12 @@ function Menu() {
       .getElementById("mainMenu")
       .querySelectorAll("li");
 
-      function changeActive(){
-          mainMenuLi.forEach(n => n.classList.remove("active"));
-          this.classList.add('active');
-      }
+    function changeActive() {
+      mainMenuLi.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
+    }
 
-      mainMenuLi.forEach( n => n.addEventListener('click', changeActive))
-
+    mainMenuLi.forEach((n) => n.addEventListener("click", changeActive));
   }, []);
 
   return (

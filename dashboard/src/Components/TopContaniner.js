@@ -11,7 +11,6 @@ function TopContaniner() {
     menuTarget.addEventListener("mouseenter", () => {
       menuTarget.style.transform = "rotate(180deg)";
       menuContainer.style.transform = "translateX(0px)";
-      
     });
 
     menuContainer.addEventListener("mouseleave", () => {
